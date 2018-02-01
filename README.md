@@ -12,4 +12,5 @@ pillow 头像生成，中英文首字母或者随机像素化。
 
 
 ![](http://breakwire.oss-cn-shanghai.aliyuncs.com/letter_avatar.png)
+![](http://breakwire.oss-cn-shanghai.aliyuncs.com/letter_avatar_1.png)
 ![](http://breakwire.oss-cn-shanghai.aliyuncs.com/pixel_avatar.png)
