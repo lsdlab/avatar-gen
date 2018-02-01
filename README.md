@@ -9,3 +9,7 @@ pillow 头像生成，中英文首字母或者随机像素化。
 参考了 https://github.com/maethor/avatar-generator 和 https://github.com/richardasaurus/randomavatar
 
 可以重构再合并一些代码。
+
+
+![](http://breakwire.oss-cn-shanghai.aliyuncs.com/letter_avatar.png)
+![](http://breakwire.oss-cn-shanghai.aliyuncs.com/pixel_avatar.png)
