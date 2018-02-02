@@ -3,13 +3,11 @@ from setuptools import setup, find_packages
 setup(
     name='avatar-gen',
     version='1.0.0',
-    packages=get_packages('avatar-gen'),
-    package_data=get_package_data('avatar-gen'),
-    description='Using pillow for generate avatars, first letter of string in Chinese and English or random pixle like avatars.',
-    author='Chen Jian',
-    author_email='lsdvincent@gmail.com',
+    author="chen Jian",
+    author_email="lsdvincent@gmail.com",
     license='MIT',
-    long_description='https://github.com/lsdlab/avatar-gen',
+    description="Using pillow for generate avatars, first letter of string in Chinese and English or random pixle like avatars.",
+    long_description=open('README.md').read(),
     packages=find_packages(),
     package_data={'': ['*.otf', 'fonts/*.otf']},
     include_package_data=True,
@@ -19,4 +17,5 @@ setup(
         "Programming Language :: Python",
         "Operating System :: OS Independent",
         "Intended Audience :: Developers"
-    ])
+    ],
+)
