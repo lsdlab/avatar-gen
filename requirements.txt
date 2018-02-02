@@ -1,1 +1,2 @@
-pillow==5.0.0
+pillow
+pytest
