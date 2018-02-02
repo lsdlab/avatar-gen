@@ -10,6 +10,7 @@ def main():
     file_path = "/Users/Chen/PythonProjects/avatar-gen/pixel_avatar.png"
     image = Image.open(io.BytesIO(image_byte_array))
     image.save(file_path)
+    # or you can save image file using instance function
     # return pixel_avatar.save(
         # image_byte_array=image_byte_array, save_location='pixel_avatar.png')
 
