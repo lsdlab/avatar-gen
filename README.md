@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/lsdlab/avatar-gen.svg?branch=master)](https://travis-ci.org/lsdlab/avatar-gen)
 
-pillow 头像生成，中英文首字母或者随机像素化。
+pillow 头像生成，中文或英文首字母或者随机像素化。
 
 Using pillow for generate avatars, first letter of string in Chinese and English or random pixle like avatars.
 
@@ -55,3 +55,4 @@ image.save(file_path)
 ![](http://breakwire.oss-cn-shanghai.aliyuncs.com/letter_avatar.png)
 ![](http://breakwire.oss-cn-shanghai.aliyuncs.com/letter_avatar_1.png)
 ![](http://breakwire.oss-cn-shanghai.aliyuncs.com/pixel_avatar.png)
+
