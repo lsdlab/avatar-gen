@@ -15,7 +15,7 @@ Using pillow for generate avatars, first letter of string in Chinese and English
 
 参考 `app.py`，用了 celery，再 Docker 化做成微服务。
 
-``` python
+``` shell
 python app.py    # python 单进程
 gunicorn app:app -c gunicorn.conf    # four worker and gevent
 celery -A app.celery worker --loglevel=info --autoscale=4,2     # celery job queue
@@ -26,15 +26,15 @@ celery -A app.celery worker --loglevel=info --autoscale=4,2     # celery job que
 用 Docker 运行请注意 `app.py` 里面的 `app.config.update()` Redis 作为 Celery 的 Broker,
 redis host 用字符串 `redis`。
 
-```
+``` shell
 docker-compose up
 ```
 
-两个 API，都是 GET  方法：
+两个 API，都是 `GET` 方法，`filetype` 参数可以不传：
 
 ``` shell
-curl -X GET 'http://localhost:5000//api/v1/letter_avatar?size=128&string=lsdvincent@gmail.com&filetype=PNG'
-curl -X GET 'http://localhost:5000//api/v1/pixel_avatar?size=128&string=lsdvincent@gmail.com&filetype=PNG'
+curl -X GET 'http://localhost:5000/api/v1/letter_avatar?size=128&string=lsdvincent@gmail.com&filetype=PNG'
+curl -X GET 'http://localhost:5000/api/v1/pixel_avatar?size=128&string=lsdvincent@gmail.com&filetype=PNG'
 ```
 
 

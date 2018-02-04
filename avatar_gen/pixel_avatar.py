@@ -8,6 +8,7 @@ from PIL import Image, ImageDraw
 class PixelAvatar(object):
 
     def __init__(self, rows=12, columns=12):
+        self.min_render_size = 256
         self.rows = rows
         self.cols = columns
         self._generate_colours()
@@ -45,8 +46,9 @@ class PixelAvatar(object):
         """
         hex_digest_byte_list = self._string_to_byte_list(string)
         matrix = self._create_matrix(hex_digest_byte_list)
-        width = size - 20
-        height = size - 20
+        render_size = max(size, self.min_render_size)
+        width = render_size - 20
+        height = render_size - 20
         return self._create_image(matrix, width, height, filetype, padding)
 
     def save(self, image_byte_array=None, save_location=None):
