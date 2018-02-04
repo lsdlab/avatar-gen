@@ -27,7 +27,7 @@ services:
     ports:
       - '6379:6379'
     volumes:
-      - .:/avatar-gen/redis_data
+      - ./avatar_gen:/data
     networks:
       - flask-redis-celery
 

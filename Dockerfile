@@ -1,3 +1,5 @@
+# avatar-gen
+
 FROM python:3.6.3
 MAINTAINER lsdvincent lsdvincent@gmail.com
 COPY . /avatar-gen

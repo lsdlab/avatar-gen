@@ -38,7 +38,7 @@ curl -X GET 'http://localhost:5000/api/v1/pixel_avatar?size=128&string=lsdvincen
 ```
 
 
-## 安装方法 Installation:
+## Python 项目包安装方法 Python project package Installation:
 
 ``` shell
 pip install git+https://github.com/lsdlab/avatar-gen.git
