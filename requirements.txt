@@ -1,2 +1,8 @@
+flask
+celery
+redis
+gunicorn
+gevent
 pillow
+oss2
 pytest

@@ -29,9 +29,16 @@ def make_celery(app):
 
 app = Flask(__name__)
 
+# for docker deploy
 app.config.update(
-    CELERY_BROKER_URL='redis://localhost:6379/0',
-    CELERY_RESULT_BACKEND='redis://localhost:6379/0')
+    CELERY_BROKER_URL='redis://redis:6379/0',
+    CELERY_RESULT_BACKEND='redis://redis:6379/0')
+
+# for native os deploy
+# app.config.update(
+    # CELERY_BROKER_URL='redis://localhost:6379/0',
+    # CELERY_RESULT_BACKEND='redis://localhost:6379/0')
+
 celery = make_celery(app)
 
 ALIYUN_ACCESS_KEY = 'LTAIPmBfYXOc9AIV'
@@ -76,7 +83,7 @@ def generate_pixel_avatar(size, string, filetype):
     return result.status
 
 
-@app.route('/letter_avatar', methods=['GET'])
+@app.route('/api/v1/letter_avatar', methods=['GET'])
 def letter_avatar():
     if request.method == 'GET':
         size = request.args.get('size', 256)
@@ -113,4 +120,4 @@ def pixel_avatar():
 
 
 if __name__ == '__main__':
-    app.run("0.0.0.0", port=8000)
+    app.run("0.0.0.0", debug=True)

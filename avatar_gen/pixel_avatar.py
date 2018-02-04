@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw
 
 class PixelAvatar(object):
 
-    def __init__(self, rows=10, columns=10):
+    def __init__(self, rows=12, columns=12):
         self.rows = rows
         self.cols = columns
         self._generate_colours()

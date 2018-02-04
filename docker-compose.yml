@@ -1,0 +1,38 @@
+version: "2"
+
+services:
+  flask:
+    build: .
+    command: gunicorn app:app -c gunicorn.conf
+    restart: always
+    ports:
+      - '5000:5000'
+    volumes:
+      - .:/avatar-gen
+    networks:
+      - flask-redis-celery
+
+  celery:
+    build: .
+    command: celery -A app.celery worker --loglevel=info --autoscale=4,2
+    restart: always
+    volumes:
+      - .:/avatar-gen
+    networks:
+      - flask-redis-celery
+
+  redis:
+    image: 'redis'
+    command: redis-server
+    ports:
+      - '6379:6379'
+    volumes:
+      - .:/avatar-gen/redis_data
+    networks:
+      - flask-redis-celery
+
+volumes:
+    redis:
+
+networks:
+    flask-redis-celery:
