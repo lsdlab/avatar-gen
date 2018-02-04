@@ -11,6 +11,11 @@ Using pillow for generate avatars, first letter of string in Chinese and English
 第一个库用的字体不能生成中文，换成了思源黑体，然后位置也调整了一下才能把字放在中间。
 
 
+## Flask API
+
+参考 `flask_api.py`，用了 celery，再 Docker 化做成微服务。
+
+
 ## 安装方法 Installation:
 
 ``` shell

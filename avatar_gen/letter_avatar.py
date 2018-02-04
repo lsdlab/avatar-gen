@@ -9,7 +9,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 class LetterAvatar(object):
     FONT_COLOR = (255, 255, 255)
-    MIN_RENDER_SIZE = 512
+    MIN_RENDER_SIZE = 256
 
     @classmethod
     def generate(cls, size, string, filetype="JPEG"):

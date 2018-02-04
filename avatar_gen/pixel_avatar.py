@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw
 
 class PixelAvatar(object):
 
-    def __init__(self, rows, columns):
+    def __init__(self, rows=10, columns=10):
         self.rows = rows
         self.cols = columns
         self._generate_colours()
@@ -39,13 +39,15 @@ class PixelAvatar(object):
             if result > 1.20:
                 colours_ok = True
 
-    def get_image(self, string, width, height, padding=0):
+    def get_image(self, size, string, filetype="JPEG", padding=10):
         """
           Byte representation of a PNG image
         """
         hex_digest_byte_list = self._string_to_byte_list(string)
         matrix = self._create_matrix(hex_digest_byte_list)
-        return self._create_image(matrix, width, height, padding)
+        width = size - 20
+        height = size - 20
+        return self._create_image(matrix, width, height, filetype, padding)
 
     def save(self, image_byte_array=None, save_location=None):
         if image_byte_array and save_location:
@@ -106,7 +108,7 @@ class PixelAvatar(object):
             return False
         return True
 
-    def _create_image(self, matrix, width, height, padding):
+    def _create_image(self, matrix, width, height, filetype, padding):
         """
         Generates a PNG byte list
         """
@@ -131,7 +133,7 @@ class PixelAvatar(object):
                     ), fill=self.fg_colour)
 
         stream = BytesIO()
-        image.save(stream, format="png", optimize=True)
+        image.save(stream, format=filetype, optimize=True)
         # return the image byte data
         return stream.getvalue()
 

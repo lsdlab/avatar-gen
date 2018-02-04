@@ -1,4 +1,3 @@
-import pytest
 import os
 import io
 from PIL import Image
@@ -7,8 +6,8 @@ from avatar_gen.pixel_avatar import PixelAvatar
 
 
 def generate_letter_avatar():
-    image_byte_array = LetterAvatar.generate(128, "lsdvincent@gmail.com",
-                                             "PNG")
+    image_byte_array = LetterAvatar.generate(
+        size=128, string="lsdvincent@gmail.com", filetype="PNG")
     file_path = "/tmp/letter_avatar.png"
     image = Image.open(io.BytesIO(image_byte_array))
     image.save(file_path)
@@ -18,7 +17,7 @@ def generate_letter_avatar():
 def geneate_pixel_avatar():
     pixel_avatar = PixelAvatar(rows=10, columns=10)
     image_byte_array = pixel_avatar.get_image(
-        string='lsdvincent@gmail.com', width=108, height=108, padding=10)
+        size=128, string='lsdvincent@gmail.com', filetype="PNG")
     file_path = "/tmp/pixel_avatar.png"
     image = Image.open(io.BytesIO(image_byte_array))
     image.save(file_path)
