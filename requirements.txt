@@ -1,8 +1,10 @@
+pillow
 flask
 celery
 redis
 gunicorn
 gevent
-pillow
 oss2
+raven[flask]
+python-dotenv
 pytest

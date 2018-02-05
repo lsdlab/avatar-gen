@@ -58,16 +58,15 @@ from avatar_gen.letter_avatar import LetterAvatar
 from avatar_gen.pixel_avatar import PixelAvatar
 
 # generate letter avatar in Chinese or Enginlish character
-image_byte_array = LetterAvatar.generate(128, "lsdvincent@gmail.com", "PNG")
-# image_byte_array = LetterAvatar.generate(128, "陈坚", "PNG")
+image_byte_array = LetterAvatar.generate(size=128, string="lsdvincent@gmail.com", filetype="PNG")
+# image_byte_array = LetterAvatar.generate(size=128, string="lsdvincent@gmail.com", filetype="PNG")
 file_path = "/Users/Chen/PythonProjects/avatar-gen/letter_avatar.png"
 image = Image.open(io.BytesIO(image_byte_array))
 image.save(file_path)
 
 # generate pixel avatar
 pixel_avatar = PixelAvatar(rows=10, columns=10)
-image_byte_array = pixel_avatar.get_image(
-    string='lsdvincent@gmail.com', width=108, height=108, padding=10)
+image_byte_array = pixel_avatar.get_image(size=128, string="lsdvincent@gmail.com", filetype="PNG")
 file_path = "/Users/Chen/PythonProjects/avatar-gen/pixel_avatar.png"
 image = Image.open(io.BytesIO(image_byte_array))
 image.save(file_path)
