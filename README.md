@@ -37,13 +37,6 @@ curl -X GET 'http://localhost:5000/api/v1/letter_avatar?size=128&string=lsdvince
 curl -X GET 'http://localhost:5000/api/v1/pixel_avatar?size=128&string=lsdvincent@gmail.com&filetype=PNG'
 ```
 
-已经 push 到 Docker Hub 上了 https://hub.docker.com/r/lsdlab/avatar-gen/
-
-``` shell
-docker pull lsdlab/avatar-gen
-docker run lsdlab/avatar-gen
-```
-
 
 ## Python 项目包安装方法 Python project package Installation:
 
