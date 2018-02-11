@@ -24,7 +24,7 @@ celery -A app.celery worker --loglevel=info --autoscale=4,2     # celery job que
 ## Docker 运行
 
 用 Docker 运行请注意 `app.py` 里面的 `app.config.update()` Redis 作为 Celery 的 Broker,
-redis host 用字符串 `redis`。
+redis host 用 docker-compose.yml 的 container_name `avatar-gen-redis`。
 
 ``` shell
 docker-compose up
