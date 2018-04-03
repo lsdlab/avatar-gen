@@ -78,7 +78,7 @@ image.save(file_path)
 
 ## 生成示例 examples:
 
-![](http://breakwire.oss-cn-shanghai.aliyuncs.com/letter_avatar.png)
-![](http://breakwire.oss-cn-shanghai.aliyuncs.com/letter_avatar_1.png)
-![](http://breakwire.oss-cn-shanghai.aliyuncs.com/pixel_avatar.png)
+![](https://breakwire.oss-cn-shanghai.aliyuncs.com/letter_avatar.png)
+![](https://breakwire.oss-cn-shanghai.aliyuncs.com/letter_avatar_1.png)
+![](https://breakwire.oss-cn-shanghai.aliyuncs.com/pixel_avatar.png)
 
