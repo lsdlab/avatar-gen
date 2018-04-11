@@ -37,14 +37,14 @@ def make_celery(app):
 app = Flask(__name__)
 
 # for docker deploy
-app.config.update(
-    CELERY_BROKER_URL=os.environ.get("DOCKER_REDIS_URL"),
-    CELERY_RESULT_BACKEND=os.environ.get("DOCKER_REDIS_URL"))
+# app.config.update(
+    # CELERY_BROKER_URL=os.environ.get("DOCKER_REDIS_URL"),
+    # CELERY_RESULT_BACKEND=os.environ.get("DOCKER_REDIS_URL"))
 
 # for native os deploy
-# app.config.update(
-# CELERY_BROKER_URL=os.environ.get("NATIVE_REDIS_URL"),
-# CELERY_RESULT_BACKEND=os.environ.get("NATIVE_REDIS_URL"))
+app.config.update(
+CELERY_BROKER_URL=os.environ.get("NATIVE_REDIS_URL"),
+CELERY_RESULT_BACKEND=os.environ.get("NATIVE_REDIS_URL"))
 
 celery = make_celery(app)
 
@@ -106,7 +106,7 @@ def letter_avatar():
         size = request.args.get('size', 256)
         string = request.args.get('string', 'avatar')
         filetype = request.args.get('filetype', 'PNG')
-        celery_result = generate_letter_avatar.delay(size, string, filetype)
+        celery_result = generate_letter_avatar.delay(int(size), string, filetype)
         result, avatar_url = celery_result.wait()
         if result == 200:
             resp = jsonify({'msg': '上传成功', 'avatar_url': avatar_url})
@@ -124,7 +124,7 @@ def pixel_avatar():
         size = request.args.get('size', 256)
         string = request.args.get('string', 'avatar')
         filetype = request.args.get('filetype', 'PNG')
-        celery_result = generate_pixel_avatar.delay(size, string, filetype)
+        celery_result = generate_pixel_avatar.delay(int(size), string, filetype)
         result, avatar_url = celery_result.wait()
         if result == 200:
             resp = jsonify({'msg': '上传成功', 'avatar_url': avatar_url})
