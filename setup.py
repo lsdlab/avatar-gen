@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='avatar-gen',
-    version='1.0.0',
+    version='1.0.1',
     author="chen Jian",
     author_email="lsdvincent@gmail.com",
     license='MIT',
