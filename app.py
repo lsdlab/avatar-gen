@@ -37,14 +37,14 @@ def make_celery(app):
 app = Flask(__name__)
 
 # for docker deploy
-# app.config.update(
-    # CELERY_BROKER_URL=os.environ.get("DOCKER_REDIS_URL"),
-    # CELERY_RESULT_BACKEND=os.environ.get("DOCKER_REDIS_URL"))
+app.config.update(
+    CELERY_BROKER_URL=os.environ.get("DOCKER_REDIS_URL"),
+    CELERY_RESULT_BACKEND=os.environ.get("DOCKER_REDIS_URL"))
 
 # for native os deploy
-app.config.update(
-CELERY_BROKER_URL=os.environ.get("NATIVE_REDIS_URL"),
-CELERY_RESULT_BACKEND=os.environ.get("NATIVE_REDIS_URL"))
+# app.config.update(
+# CELERY_BROKER_URL=os.environ.get("NATIVE_REDIS_URL"),
+# CELERY_RESULT_BACKEND=os.environ.get("NATIVE_REDIS_URL"))
 
 celery = make_celery(app)
 
