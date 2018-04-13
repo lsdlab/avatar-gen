@@ -1,4 +1,4 @@
-version: "2"
+version: "3"
 services:
   flask:
     container_name: avatar-gen-flask
@@ -8,7 +8,7 @@ services:
     ports:
       - '5000:5000'
     volumes:
-      - .:/avatar-gen
+      - .:/compose
     networks:
       - flask-redis-celery
 
@@ -20,7 +20,7 @@ services:
     ports:
       - '6379:6379'
     volumes:
-      - ./avatar_gen:/data
+      - ./compose:/data
     networks:
       - flask-redis-celery
 
@@ -30,7 +30,7 @@ services:
     command: celery -A app.celery worker --loglevel=info --autoscale=4,2
     restart: always
     volumes:
-      - .:/avatar-gen
+      - .:/compose
     networks:
       - flask-redis-celery
 

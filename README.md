@@ -40,7 +40,7 @@ curl -X GET 'http://localhost:5000/api/v1/pixel_avatar?size=128&string=lsdvincen
 
 ## Python 项目包安装方法 Python project package Installation:
 
-``` shell
+```shell
 pip install git+https://github.com/lsdlab/avatar-gen.git
 ```
 
@@ -51,7 +51,7 @@ pip install git+https://github.com/lsdlab/avatar-gen.git
 
 generate result is image byte array, you need to save to file using PIL.
 
-``` python
+```python
 import io
 from PIL import Image
 from avatar_gen.letter_avatar import LetterAvatar
@@ -82,3 +82,22 @@ image.save(file_path)
 ![](https://breakwire.oss-cn-shanghai.aliyuncs.com/letter_avatar_1.png)
 ![](https://breakwire.oss-cn-shanghai.aliyuncs.com/pixel_avatar.png)
 
+
+## Test
+
+```shell
+pytest
+```
+
+output:
+
+```shell
+Test session starts (platform: darwin, Python 3.6.3, pytest 3.5.0, pytest-sugar 0.9.1)
+rootdir: /Users/Chen/PythonProjects/avatar-gen, inifile:
+plugins: sugar-0.9.1, flask-0.10.0, django-3.1.2
+
+ test_avatar_gen.py ✓✓                                                     100% ██████████
+
+Results (0.16s):
+       2 passed
+```
