@@ -11,10 +11,5 @@ pipeline {
         sh 'pytest'
       }
     }
-    stage('slack') {
-      steps {
-        slackSend(token: 'UZFyrMluz93IDFj4kCtjoEPH', teamDomain: 'https://breakwire.slack.com', message: 'jenkins build finished', baseUrl: 'https://breakwire.slack.com/services/hooks/jenkins-ci/', botUser: true)
-      }
-    }
   }
 }
