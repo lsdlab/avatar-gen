@@ -8,7 +8,6 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'cd avatar-gen'
         sh 'pip install -r requirements.txt'
         sh 'pytest'
       }
