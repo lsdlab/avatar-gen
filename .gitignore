@@ -89,6 +89,3 @@ docs/_build/
 target/
 
 .pytest_cache/*
-
-
-.env
