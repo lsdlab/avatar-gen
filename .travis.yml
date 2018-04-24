@@ -1,8 +1,6 @@
-before_install:
-  - docker-compose up
 language: python
 python:
   - "3.6"
+install:
+  - pip install -r requirements.txt
 script: pytest
-after_script:
-  - docker-compose stop

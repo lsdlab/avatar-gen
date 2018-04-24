@@ -49,9 +49,9 @@ def test_pixel_avatar():
     assert os.path.exists(geneate_pixel_avatar()) == True
 
 
-def test_letter_avatar_request():
-    assert request_letter_avatar() == True
+# def test_letter_avatar_request():
+#     assert request_letter_avatar() == True
 
 
-def test_pixel_avatar_request():
-    assert request_pixel_avatar() == True
+# def test_pixel_avatar_request():
+#     assert request_pixel_avatar() == True
