@@ -1,8 +1,6 @@
 # avatar-gen
 
-[![Build Status](https://travis-ci.org/lsdlab/avatar-gen.svg?branch=master)](https://travis-ci.org/lsdlab/avatar-gen)
-
-[![Build Status](https://semaphoreci.com/api/v1/lsdlab/avatar-gen/branches/master/badge.svg)](https://semaphoreci.com/lsdlab/avatar-gen)
+[![Build Status](https://travis-ci.org/lsdlab/avatar-gen.svg?branch=master)](https://travis-ci.org/lsdlab/avatar-gen) [![Build Status](https://semaphoreci.com/api/v1/lsdlab/avatar-gen/branches/master/badge.svg)](https://semaphoreci.com/lsdlab/avatar-gen)
 
 pillow 头像生成，中文或英文首字母或者随机像素化。
 
