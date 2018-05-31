@@ -2,11 +2,11 @@ from setuptools import setup, find_packages
 
 setup(
     name='avatar-gen',
-    version='1.0.1',
+    version='1.0.2',
     author="chen Jian",
     author_email="lsdvincent@gmail.com",
     license='MIT',
-    description="Using pillow for generate avatars, first letter of string in Chinese and English or random pixle like avatars.",
+    description="Using pillow for generate avatars, first letter of string in Chinese and English or random pixel like avatars.",
     long_description=open('README.md').read(),
     packages=find_packages(),
     package_data={'': ['*.otf', 'fonts/*.otf']},
