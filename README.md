@@ -6,7 +6,7 @@
 
 pillow 头像生成，中文或英文首字母或者随机像素化。
 
-Using pillow for generate avatars, first letter of string in Chinese and English or random pixle like avatars.
+Using pillow for generate avatars, first letter of string in Chinese and English or random pixel like avatars.
 
 参考了 https://github.com/maethor/avatar-generator 和 https://github.com/richardasaurus/randomavatar
 
