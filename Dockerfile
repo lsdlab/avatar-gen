@@ -1,4 +1,4 @@
-FROM python:3.6.3
+FROM python:3.6.5
 MAINTAINER lsdvincent lsdvincent@gmail.com
 COPY . /avatar-gen
 WORKDIR /avatar-gen
