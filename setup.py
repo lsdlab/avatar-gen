@@ -7,7 +7,6 @@ setup(
     author_email="lsdvincent@gmail.com",
     license='MIT',
     description="Using pillow for generate avatars, first letter of string in Chinese and English or random pixel like avatars.",
-    long_description=open('README.md').read(),
     packages=find_packages(),
     package_data={'': ['*.otf', 'fonts/*.otf']},
     include_package_data=True,
