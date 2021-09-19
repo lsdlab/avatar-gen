@@ -1,0 +1,15 @@
+kind: pipeline
+name: default
+
+steps:
+- name: test
+  image: python:3.9.6
+  commands:
+    - python3 -V
+    - python3 -m pip install --user --upgrade pip setuptools -i https://pypi.tuna.tsinghua.edu.cn/simple
+    - python3 -m pip install --user -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+    - pytest
+
+trigger:
+  branch:
+  - master
