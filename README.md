@@ -1,6 +1,7 @@
 # avatar-gen
 
 [![Build Status](https://travis-ci.org/lsdlab/avatar-gen.svg?branch=master)](https://travis-ci.org/lsdlab/avatar-gen) [![Build Status](https://semaphoreci.com/api/v1/lsdlab/avatar-gen/branches/master/badge.svg)](https://semaphoreci.com/lsdlab/avatar-gen)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Flsdlab%2Favatar-gen.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Flsdlab%2Favatar-gen?ref=badge_shield)
 
 pillow 头像生成，中文或英文首字母或者随机像素化。
 
@@ -101,3 +102,7 @@ plugins: sugar-0.9.1, flask-0.10.0, django-3.1.2
 Results (0.16s):
        2 passed
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Flsdlab%2Favatar-gen.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Flsdlab%2Favatar-gen?ref=badge_large)
